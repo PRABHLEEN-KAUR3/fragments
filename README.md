@@ -1,6 +1,8 @@
 # fragments
 My repository for CCP555 (cloud computing) project.
 
+--- LAB 01 ---
+
 Instructions on how to run various scripts I created using:
 
 1. lint: I first installed the ESLint using npm as "npm install eslint --save-dev" and used it as development dependency. Then, after setting up the configuration file, I created a eslintrc.js file and added my lint script into it. To run the script, I used "npm run lint" on integrated vs terminal and hit enter and made sure there were no errors.
