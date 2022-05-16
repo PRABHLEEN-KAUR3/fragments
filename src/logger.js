@@ -1,5 +1,5 @@
 // src/logger.js
-
+/* eslint @typescript-eslint/no-var-requires: "off" */
 // Use `info` as our standard log level if not specified
 const options = { level: process.env.LOG_LEVEL || 'info' };
 
