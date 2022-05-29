@@ -1,5 +1,5 @@
 // src/server.js
-/* eslint @typescript-eslint/no-var-requires: "off" */
+
 // We want to gracefully shutdown our server
 const stoppable = require('stoppable');
 

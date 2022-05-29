@@ -1,5 +1,4 @@
 // src/authentication.js
-/* eslint @typescript-eslint/no-var-requires: "off" */
 
 // Configure a JWT token strategy for Passport based on
 // Identity Token provided by Cognito. The token will be

@@ -1,5 +1,4 @@
 // src/routes/index.js
-/* eslint @typescript-eslint/no-var-requires: "off" */
 
 const express = require('express');
 

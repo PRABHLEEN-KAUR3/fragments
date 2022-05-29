@@ -1,5 +1,4 @@
 // src/index.js
-/* eslint @typescript-eslint/no-var-requires: "off" */
 
 // Read environment variables from an .env file (if present)
 require('dotenv').config();
@@ -23,3 +22,4 @@ process.on('unhandledRejection', (reason, promise) => {
 
 // Start our server
 require('./server');
+

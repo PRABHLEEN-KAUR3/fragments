@@ -1,5 +1,4 @@
 // src/routes/api/index.js
-/* eslint @typescript-eslint/no-var-requires: "off" */
 
 /**
  * The main entry-point for the v1 version of the fragments API.

@@ -1,11 +1,12 @@
 // src/app.js
-/* eslint @typescript-eslint/no-var-requires: "off" */
+
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const compression = require('compression');
 
 // version and author from our package.json file
+// eslint-disable-next-line no-unused-vars
 const { version, author } = require('../package.json');
 
 const logger = require('./logger');
