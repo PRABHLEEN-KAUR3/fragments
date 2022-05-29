@@ -10,6 +10,7 @@ const logger = require('./logger');
 // https://nodejs.org/api/process.html#event-uncaughtexception
 process.on('uncaughtException', (err, origin) => {
   logger.fatal({ err, origin }, 'uncaughtException');
+
   throw err;
 });
 
