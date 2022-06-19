@@ -1,7 +1,7 @@
 # Use node version 16.15.0
 FROM node:16.15.0
 
-LABEL maintainer="Prabhleen Kaur prabhleen-kaur3@myseneca.ca"
+LABEL maintainer="Prabhleen Kaur <prabhleen-kaur3@myseneca.ca>"
 LABEL description="Fragments node.js microservice"
 
 # We default to use port 8080 in our service
