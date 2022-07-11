@@ -32,7 +32,7 @@ RUN npm install
 COPY ./src ./src
 
 # Start the container by running our server
-CMD npm start
+# ##### CMD [ "npm", "start" ]
 
 # We run our service on port 8080
 EXPOSE 8080
@@ -44,7 +44,8 @@ COPY ./src ./src
 COPY ./tests/.htpasswd ./tests/.htpasswd
 
 # Run the server
-CMD npm start
+###### CMD [ "npm", "start" ]
+# CMD npm start
 
 # ------------ Dockefile Optimization - Lab-6 - Part 20 -------------------
 # Create a new user (including a home-directory, which is optional)
@@ -68,7 +69,7 @@ FROM node:16.15.1-alpine@sha256:294ed7085d137d4f16fd97c0e1518f1d0386dd7fda7c4897
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
-RUN apt-get update && apt-get install -y nginx
+RUN apt-get update && apt-get install -y --no-install-recommends nginx=16.15.1
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
@@ -79,8 +80,9 @@ FROM nginx:16.15.1-alpine@sha256:294ed7085d137d4f16fd97c0e1518f1d0386dd7fda7c489
 # Copy cached dependencies from previous stage so we don't have to download
 COPY --from=dependencies /app /app
 
+WORKDIR /app
 # Copy source code into the image
-COPY . ./app
+COPY . ./
 
 #Put our app/ into /usr/share/nginx/html/ and host static files
 COPY . /usr/share/nginx/html/
@@ -91,5 +93,5 @@ EXPOSE 80
 
 #Health Check 
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
-CMD curl --fail localhost:80 || exit 1
+CMD [ "curl", "--fail", "localhost:80", "||", "exit 1" ]
 
